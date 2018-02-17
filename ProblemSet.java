@@ -8,11 +8,19 @@
 import java.util.ArrayList;
 
 public class ProblemSet {
-  public ArrayList<Integer> parameters = new ArrayList<Integer>();
-  public ArrayList<ArrayList<Character>> pizza = new ArrayList<ArrayList<Character>>();
+  private ArrayList<Integer> parameters = new ArrayList<Integer>();
+  private ArrayList<ArrayList<Character>> pizza = new ArrayList<ArrayList<Character>>();
 
   public ProblemSet( ArrayList<Integer> parameters, ArrayList<ArrayList<Character>> pizza) {
     this.parameters = parameters;
     this.pizza = pizza;
+  }
+
+  public ArrayList<ArrayList<Character>> getPizza() {
+    return pizza;
+  }
+
+  public  ArrayList<Integer> getParam() {
+    return parameters;
   }
 }

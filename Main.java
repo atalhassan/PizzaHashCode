@@ -19,8 +19,7 @@ public class Main {
   public static void main(String[] args) {
     String filename = args[0];
     ProblemSet ps = readFile(filename);
-    System.out.println(ps.parameters);
-    System.out.println(ps.pizza);
+    PizzaCutter pc = new PizzaCutter(ps.getParam(), ps.getPizza());
   }
 
   // Read the problem from a file then represent it with a class
@@ -48,7 +47,7 @@ public class Main {
         }
         pizza.add(row);
       }
-      
+
       sc.close();
     } catch (FileNotFoundException ex) {
       ex.printStackTrace();
